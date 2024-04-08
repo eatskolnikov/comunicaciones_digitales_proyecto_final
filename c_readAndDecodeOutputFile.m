@@ -2,8 +2,6 @@ load('files/receivedFileData.mat','received_binary_data');  % Carga sólo la var
 
 % Dividir la cadena en segmentos de 8 bits y convertirlos a texto
 textData = '';
-
-disp(length(received_binary_data))
 for i = 1:8:length(received_binary_data)-7
     binSegment = received_binary_data(2, i:i+7);
     binStr = num2str(binSegment);
@@ -12,7 +10,7 @@ for i = 1:8:length(received_binary_data)-7
 end
 
 % Guardar el texto decodificado en un archivo .txt
-fileID = fopen('receivedFile.txt', 'w');
+fileID = fopen('files/receivedFile.txt', 'w');
 fprintf(fileID, '%s', textData);
 fclose(fileID);
 
