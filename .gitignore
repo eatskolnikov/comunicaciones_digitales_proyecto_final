@@ -2,7 +2,8 @@ files/receivedFileData.mat
 files/receivedFile.txt
 # Windows default autosave extension
 *.asv
-
+*.tmp
+~$*
 # OSX / *nix default autosave extension
 *.m~
 
