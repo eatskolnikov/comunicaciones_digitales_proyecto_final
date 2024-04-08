@@ -1,5 +1,5 @@
 % Abrir el archivo en modo 'lectura'
-fileID = fopen('envio.txt', 'r');
+fileID = fopen('files/fileToSend.txt', 'r');
 % Leer el archivo como 'uint8' para obtener la representación numérica de cada carácter
 data = fread(fileID, '*uint8');
 % Cerrar el archivo
